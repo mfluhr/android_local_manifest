@@ -19,6 +19,18 @@
     <!-- GitHub repository -->
     <remote name="github" fetch="https://github.com/mfluhr/" />
 
-    <!-- do nothing -->
+    <!-- Build errors troubleshooting message -->
+    <notice>
+- Set the 'LC_ALL' environment variable to 'C' to fix any flex locale build errors (or rebuild the 'flex-2.5.39' binary)
+- Set the 'BUILD_NUMBER' environment variable to avoid build fingerprint overflow errors
+- Patch the JDK security configuration file to allow TLS, if needed, to avoid Jack server start errors
+    </notice>
+
+    <!-- Replace the platform/art repository to fix mmap build errors -->
+    <remove-project name="platform/art" />
+    <project path="art" name="android_platform_art" remote="github" revision="android-8.1.0_r67-mmap_build_error_fix" groups="pdk" />
+
+    <!-- Add the 'update-flex-2.5.39.sh' to rebuild the 'flex-2.5.39' pre-built executable -->
+    <project path="vendor/acme/scripts/update-flex-2.5.39" name="android_vendor_acme_scripts_update-flex-2.5.39" remote="github" revision="main" groups="developers, tools" />
 
 </manifest>
