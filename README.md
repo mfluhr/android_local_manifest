@@ -7,11 +7,13 @@ It contains the following fixes/changes applied:
 - Workaround for mmap error when building (See [here](https://android-review.googlesource.com/c/platform/art/+/2226578) for more details)
 - `update-flex-2.5.39.sh` script to rebuild the _flex_ prebuilt binary using the workstation build tools
 
+It also contains the ACME emulators `acme_x86_64` and `acme_car_x86_64`, for both classic Phone & Tablet Android and Android Automotive, that will be used as base for adding and/or replacing components and features.
+
 ## Usage
 
 ```text
 repo init -u https://android.googlesource.com/platform/manifest -b android-9.0.0_r46
-git clone https://github.com/mfluhr/android_local_manifest.git -b android-9.0.0_r46 .repo/local_manifests
+git clone https://github.com/mfluhr/android_local_manifest.git -b android-9.0.0_r46-acme .repo/local_manifests
 repo sync
 ```
 
