@@ -19,6 +19,7 @@
     <!-- GitHub repository -->
     <remote name="github" fetch="https://github.com/mfluhr/" />
 
-    <!-- do nothing -->
+    <!-- Add the ACME emulators device folder -->
+    <project path="device/acme/generic" name="android_device_acme_generic" remote="github" revision="android-13" groups="pdk" />
 
 </manifest>

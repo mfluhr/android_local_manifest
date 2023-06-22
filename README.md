@@ -2,11 +2,13 @@
 
 This local manifest can be used with the _android-13.0.0_r52_ release tag (Build ID _TQ3A.230605.012_) when building Android on a workstation running a modern Linux distribution.
 
+It contains the ACME emulators `acme_x86_64` and `acme_car_x86_64`, for both classic Phone & Tablet Android and Android Automotive, that will be used as base for adding and/or replacing components and features.
+
 ## Usage
 
 ```text
 repo init -u https://android.googlesource.com/platform/manifest -b android-13.0.0_r52
-git clone https://github.com/mfluhr/android_local_manifest.git -b android-13.0.0_r52 .repo/local_manifests
+git clone https://github.com/mfluhr/android_local_manifest.git -b android-13.0.0_r52-acme .repo/local_manifests
 repo sync
 ```
 
