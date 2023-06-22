@@ -30,6 +30,9 @@
     <remove-project name="platform/art" />
     <project path="art" name="android_platform_art" remote="github" revision="android-8.1.0_r67-mmap_build_error_fix" groups="pdk" />
 
+    <!-- Add the ACME emulators device folder -->
+    <project path="device/acme/generic" name="android_device_acme_generic" remote="github" revision="android-8.1" groups="pdk" />
+
     <!-- Add the 'update-flex-2.5.39.sh' to rebuild the 'flex-2.5.39' pre-built executable -->
     <project path="vendor/acme/scripts/update-flex-2.5.39" name="android_vendor_acme_scripts_update-flex-2.5.39" remote="github" revision="main" groups="developers, tools" />
 
